@@ -21,8 +21,8 @@ ap.add_argument("--phone-number", required=True,
                 help="your phone number in E.164 format, e.g., +1234567890")
 args = vars(ap.parse_args())
 
-TWILIO_SID = "ACbac2c4cf2bb16a30008659493def34b8"
-TWILIO_AUTH_TOKEN = "cc104a4e2c6dadf356266372904f8fe4"
+TWILIO_SID = "Enter_your_Twilio_Account_SID"
+TWILIO_AUTH_TOKEN = "Enter_your_Twilio_Authentic_Token"
 client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
 
 def eye_aspect_ratio(eye):
@@ -78,8 +78,8 @@ while True:
                 # Send a phone call alert
                 call = client.calls.create(
                     to=args["phone_number"],
-                    from_="+18448020505",
-                    url="https://demo.twilio.com/welcome/voice/"
+                    from_="Enter_your_Twilio_Phone_Number",
+                    url="Enter_your_Webhook_URL"
                 )
         else:
             frame_count = 0
